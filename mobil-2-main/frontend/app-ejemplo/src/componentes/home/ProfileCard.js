@@ -4,9 +4,9 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "./ProfileCardStyles";
 
 
+const twitch = <Icon name={'twitch'} size={30} color={'black'}/>
 const twitter = <Icon name={'twitter'} size={30} color={'black'}/>
-const facebook = <Icon name={'facebook'} size={30} color={'black'}/>
-const instagram = <Icon name={'instagram'} size={30} color={'black'}/>
+const Pinterest = <Icon name={'Pinterest'} size={30} color={'black'}/>
 const linkedin = <Icon name={'linkedin'} size={30} color={'black'}/>
 const tiktok = <Icon name={'sitemap'} size={30} color={'black'}/>
 const ProfileCard = () => {
@@ -34,12 +34,12 @@ const ProfileCard = () => {
                 <TouchableWithoutFeedback style={{color: 'blue'}} onPress={() => {
                     Linking.openURL('https://twitter.com/')
                 }}>
-                    {Pinterest}
+                    {twitter}
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback style={{color: 'blue'}} onPress={() => {
                     Linking.openURL('https://www.pinterest.es/')
                 }}>
-                    {instagram}
+                    {pinterest}
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback onPress={()=>Linking.openURL('https://linkedin.com/')}>
                     {linkedin}
