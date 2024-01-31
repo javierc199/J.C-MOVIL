@@ -1,6 +1,8 @@
 import React from "react";
 import {View, Text, StyleSheet, Image, Linking,TouchableWithoutFeedback} from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
+import styles from "./ProfileCardStyles";
+
 
 const twitter = <Icon name={'twitter'} size={30} color={'black'}/>
 const facebook = <Icon name={'facebook'} size={30} color={'black'}/>
@@ -25,17 +27,17 @@ const ProfileCard = () => {
             <View style={styles.buttonContainer}>
 
                 <TouchableWithoutFeedback style={{color: 'blue'}} onPress={() => {
-                    Linking.openURL('https://facebook.com/')
+                    Linking.openURL('https://www.twitch.tv/')
                 }}>
-                    {facebook}
+                    {twitch}
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback style={{color: 'blue'}} onPress={() => {
                     Linking.openURL('https://twitter.com/')
                 }}>
-                    {twitter}
+                    {Pinterest}
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback style={{color: 'blue'}} onPress={() => {
-                    Linking.openURL('https://instagram.com/')
+                    Linking.openURL('https://www.pinterest.es/')
                 }}>
                     {instagram}
                 </TouchableWithoutFeedback>
@@ -69,20 +71,23 @@ const styles = StyleSheet.create({
     avatar: {
         width: 150,
         height: 150,
-        borderRadius: 75,
-        borderWidth: 10,
+        borderRadius: 20,  
+        borderWidth: 5,
         borderColor: 'white'
     },
+
     name: {
         marginTop: 15,
-        fontSize: 20,
-        fontWeight: 'bold'
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: 'purple' 
     },
+
     buttonContainer: {
         flexDirection: 'row',
         marginTop: 20,
-        width: '60%',
-        justifyContent: 'space-between'
+        width: '80%', 
+        justifyContent: 'space-around',  
     }
 });
 export default ProfileCard
